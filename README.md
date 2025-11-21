@@ -11,7 +11,13 @@ Faz upload automático de vídeos para o YouTube com metadados personalizáveis.
 # 2. Instalar dependências
 pip install -r requirements.txt
 
-# 3. Executar
+# 3. Configurar variáveis de ambiente
+# Editar arquivo .env com suas credenciais e caminhos (ver Configuração abaixo)
+```
+> ⚠️ **Importante**: Leia [SETUP_YOUTUBE_API.md](SETUP_YOUTUBE_API.md) para configurar as credenciais do Google antes de executar!
+
+```bash
+# 4. Executar
 python scripts/upload.py
 ```
 
