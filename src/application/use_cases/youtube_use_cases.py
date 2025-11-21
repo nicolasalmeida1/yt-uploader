@@ -1,5 +1,6 @@
 import logging
 from typing import List, Dict
+from pathlib import Path
 from src.infrastructure.external_services.youtube.upload_service import YouTubeUploadService
 from src.infrastructure.file_system.file_service import YouTubeFileSystemService
 from config.settings import config
@@ -61,13 +62,14 @@ class UploadMultipleVideosUseCase:
         
         if not videos:
             logger.warning("Nenhum vídeo encontrado!")
-            return {'total': 0, 'success': 0, 'failed': 0, 'uploads': []}
+            return {'total': 0, 'success': 0, 'failed': 0, 'uploads': [], 'successful_folders': []}
         
         stats = {
             'total': len(videos),
             'success': 0,
             'failed': 0,
-            'uploads': []
+            'uploads': [],
+            'successful_folders': []  # Rastrear pastas com sucesso
         }
         
         for idx, video_path in enumerate(videos, 1):
@@ -89,6 +91,10 @@ class UploadMultipleVideosUseCase:
                         'video_id': result[1],
                         'status': 'success'
                     })
+                    # Rastrear pasta do vídeo bem-sucedido
+                    video_folder = str(Path(video_path).parent)
+                    if video_folder not in stats['successful_folders']:
+                        stats['successful_folders'].append(video_folder)
                 else:
                     stats['failed'] += 1
                     stats['uploads'].append({

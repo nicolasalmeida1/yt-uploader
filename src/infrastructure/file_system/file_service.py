@@ -34,7 +34,7 @@ class YouTubeFileSystemService:
             if not os.path.exists(video_path):
                 return {}
             
-            file_stat = os.path.stat(video_path)
+            file_stat = os.stat(video_path)
             
             return {
                 'path': video_path,
@@ -46,3 +46,17 @@ class YouTubeFileSystemService:
         except Exception as e:
             logger.error(f"Erro ao obter info do vídeo: {str(e)}")
             return {}
+    
+    @staticmethod
+    def delete_folder(folder_path: str) -> bool:
+        """Delete uma pasta e todo seu conteúdo de forma segura."""
+        try:
+            import shutil
+            if os.path.exists(folder_path):
+                shutil.rmtree(folder_path)
+                logger.info(f"Pasta deletada com sucesso: {folder_path}")
+                return True
+            return False
+        except Exception as e:
+            logger.error(f"Erro ao deletar pasta {folder_path}: {str(e)}")
+            return False
