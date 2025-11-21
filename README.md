@@ -52,8 +52,8 @@ DELAY_BETWEEN_UPLOADS=60
 
 # Metadados padrão dos vídeos
 DEFAULT_VIDEO_TITLE=Reels compilação
-DEFAULT_VIDEO_DESCRIPTION=Reels e vídeos compilados do Instagram
-DEFAULT_VIDEO_TAGS=reels,instagram,compilação,shorts
+DEFAULT_VIDEO_DESCRIPTION=Reels e vídeos compilados
+DEFAULT_VIDEO_TAGS=reels,compilação,shorts
 
 # Privacidade (PUBLIC, UNLISTED, PRIVATE)
 VIDEO_PRIVACY_STATUS=PRIVATE

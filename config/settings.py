@@ -35,11 +35,11 @@ class Config:
     
     @property
     def default_video_description(self) -> str:
-        return os.getenv('DEFAULT_VIDEO_DESCRIPTION', 'Reels e vídeos compilados do Instagram')
+        return os.getenv('DEFAULT_VIDEO_DESCRIPTION', 'Reels e vídeos compilados')
     
     @property
     def default_video_tags(self) -> list:
-        tags_str = os.getenv('DEFAULT_VIDEO_TAGS', 'reels,instagram,compilação,shorts')
+        tags_str = os.getenv('DEFAULT_VIDEO_TAGS', 'reels,compilação,shorts')
         return [tag.strip() for tag in tags_str.split(',')]
     
     @property

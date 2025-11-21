@@ -20,7 +20,7 @@ Guia passo a passo para configurar a autenticação com Google API.
 2. **Criar novo projeto**
    - Clicar no dropdown de projetos (topo)
    - Clicar "NEW PROJECT"
-   - Nome: `instagram-youtube-uploader`
+   - Nome: `youtube-uploader`
    - Criar
 
 3. **Selecionar projeto**
@@ -55,7 +55,7 @@ Guia passo a passo para configurar a autenticação com Google API.
    - Clicar "Configure OAuth consent screen"
    - Tipo de usuário: "External"
    - Preencher informações básicas:
-     - App name: `Instagram Downloader`
+     - App name: `Downloader`
      - User support email: seu email
      - Developer contact: seu email
    - Salvar e continuar
@@ -81,7 +81,7 @@ Guia passo a passo para configurar a autenticação com Google API.
    - Clicar "+ CREATE CREDENTIALS"
    - Type: "OAuth 2.0 Client ID"
    - Application type: "Desktop application"
-   - Name: `Instagram Uploader`
+   - Name: `Uploader`
    - Criar
 
 3. **Download**
