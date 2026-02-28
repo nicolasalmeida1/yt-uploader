@@ -242,7 +242,7 @@ python C:\...\yt-uploader\scripts\upload.py
 
 ---
 
-## 🔄 Workflow com Instagram Downloader
+## 🔄 Workflow com Instagram Downloader v1.0.0
 
 ```bash
 # 1. Fazer download do Instagram
